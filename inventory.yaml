@@ -1,0 +1,27 @@
+groups:
+  - name: ssh_nodes
+    groups:
+      - name: web_01
+        config:
+          ssh:
+            user: ubuntu
+        nodes:
+          - 104.196.3.52
+      - name: web_02
+        config:
+          ssh:
+            user: ubuntu
+        nodes:
+          - 35.237.150.53
+      - name: lb
+        config:
+          ssh:
+            user: ubuntu
+        nodes:
+          - 34.73.145.2
+    config:
+      transport: ssh
+      ssh:
+        user: ubuntu
+        private-key: ~/.ssh/holberton
+        host-key-check: false
