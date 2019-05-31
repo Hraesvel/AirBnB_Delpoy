@@ -1,0 +1,20 @@
+server  {                                                               
+        listen 80 default_server;                                       
+        listen [::]:80 default_server;                                  
+        server_name 0.0.0.0;                                            
+        error_page 404 /page_not_found.html;                            
+        root /var/www/default;                                          
+                                                                        
+                                                                        
+        location / {                                                    
+                proxy_pass http://0:5000;                               
+        }                                                               
+                                                                        
+        location /airbnb-onepage {                                      
+                proxy_pass http://0.0.0.0:5000/airbnb-onepage;          
+        }                                                               
+                                                                        
+        location ~ ^/airbnb-dynamic/number_odd_or_even/(.+)$ {          
+                proxy_pass http://0.0.0.0:5001/number_odd_or_even/$1;   
+        }                                                               
+}                                                                       
