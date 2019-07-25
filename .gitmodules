@@ -1,0 +1,4 @@
+[submodule "AirBnB_clone_v3"]
+	url = https://github.com/Ostoyae/AirBnB_clone_v3.git
+[submodule "AirBnB_clone_v4"]
+	url = https://github.com/Ostoyae/AirBnB_clone_v4.git
